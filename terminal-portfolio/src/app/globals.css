@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Light Theme */
+    --light-background: #fbf3c4;
+    --light-foreground: #69582a;
+    --light-yellow: #a19878;
+    --light-green: #7c7564;
+    --light-gray: #d1c79f;
+    --light-blue: #848464;
+    --light-red: #b8b097;
+
+    /* Dark Theme */
+    --dark-background: #292c26;
+    --dark-foreground: #fbfbfb;
+    --dark-yellow: #989997;
+    --dark-green: #8b6968;
+    --dark-gray: #ced9d4;
+    --dark-blue: #728492;
+    --dark-red: #d7d0a6;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: monospace, sans-serif;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
+    --yellow: var(--dark-yellow);
+    --green: var(--dark-green);
+    --gray: var(--dark-gray);
+    --blue: var(--dark-blue);
+    --red: var(--dark-red);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light-background);
+    --foreground: var(--light-foreground);
+    --yellow: var(--light-yellow);
+    --green: var(--light-green);
+    --gray: var(--light-gray);
+    --blue: var(--light-blue);
+    --red: var(--light-red);
+  }
+}
+
+/* Terminal specific styles */
+.text-light-yellow {
+  color: var(--light-yellow);
+}
+
+.text-dark-yellow {
+  color: var(--dark-yellow);
+}
+
+.text-light-green {
+  color: var(--light-green);
+}
+
+.text-dark-green {
+  color: var(--dark-green);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+.text-dark-gray {
+  color: var(--dark-gray);
+}
+
+.text-light-blue {
+  color: var(--light-blue);
+}
+
+.text-dark-blue {
+  color: var(--dark-blue);
+}
+
+.text-light-red {
+  color: var(--light-red);
+}
+
+.text-dark-red {
+  color: var(--dark-red);
+}
+
+.bg-light-background {
+  background-color: var(--light-background);
+}
+
+.bg-dark-background {
+  background-color: var(--dark-background);
+}
+
+.border-light-yellow {
+  border-color: var(--light-yellow);
+}
+
+.border-dark-yellow {
+  border-color: var(--dark-yellow);
+}
+
+/* Add custom font */
+@font-face {
+  font-family: 'Hack';
+  src: url('https://ext.same-assets.com/542052691/1083563120.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
